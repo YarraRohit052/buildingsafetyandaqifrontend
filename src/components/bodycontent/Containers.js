@@ -23,7 +23,7 @@ const Containers = () => {
     // }, []);
     useEffect(() => {
         setInterval(() => {
-            fetch("https://buildingsafetyandaqibackend.onrender.com/api/sensordata/api/sensordata")
+            fetch("https://buildingsafetyandaqibackend.onrender.com/api/sensordata")
                 .then(async result => {
                     const data = await result.json();
                     setTemperature(data.temperature);
