@@ -1,0 +1,123 @@
+.user__info__container {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.user__details__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+}
+
+.user__logo__container {
+    width: 25%;
+    margin-left: 1.4rem;
+}
+
+.user__logo {
+    width: 80px !important;
+    height: 80px !important;
+}
+
+.user__info__name {
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px rgba(214, 239, 238, 0.575), 0 0 5px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0);
+    align-items: center;
+    font-size: 20px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .user__logo__container {
+        width: 25%;
+        margin-left: 1.5rem;
+    }
+
+    .user__details__container {
+        width: 75%;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 820px) {
+    .user__logo__container {
+        width: 35%;
+        margin-left: 1.5rem;
+    }
+
+    .user__details__container {
+        width: 65%;
+    }
+
+    .user__logo {
+        width: 80px !important;
+        height: 80px !important;
+    }
+
+    .user__info__name {
+        color: white;
+        text-shadow: 1px 1px 2px black, 0 0 25px rgba(214, 239, 238, 0.575), 0 0 5px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0);
+        align-items: center;
+        font-size: 19px;
+        margin: auto;
+    }
+}
+@media only screen and (min-width: 653px) and (max-width: 740px) {
+    .user__info__name {
+        color: white;
+        text-shadow: 1px 1px 2px black, 0 0 25px rgba(214, 239, 238, 0.575), 0 0 5px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0);
+        align-items: center;
+        font-size: 15px;
+    }
+    .user__logo {
+        width: 60px !important;
+        height: 60px !important;
+    }
+ }
+ @media only screen and (min-width: 844px) and (max-width: 900px){
+    .user__info__name {
+        color: white;
+        text-shadow: 1px 1px 2px black, 0 0 25px rgba(214, 239, 238, 0.575), 0 0 5px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0);
+        align-items: center;
+        font-size: 15px;
+        margin: auto;
+    }
+    .user__logo {
+        width: 60px !important;
+        height: 60px !important;
+    }
+    .user__logo__container {
+        width: 35%;
+        margin-left: 0.9rem;
+    }
+ }
+ @media only screen and (min-width: 901px) and (max-width: 920px){
+    .user__info__name {
+        color: white;
+        text-shadow: 1px 1px 2px black, 0 0 25px rgba(214, 239, 238, 0.575), 0 0 5px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0);
+        align-items: center;
+        font-size: 15px;
+        margin: auto;
+    }
+    .user__logo {
+        width: 60px !important;
+        height: 60px !important;
+    }
+    .user__logo__container {
+        width: 35%;
+        margin-left: 0.9rem;
+    }
+ }
+ 
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}

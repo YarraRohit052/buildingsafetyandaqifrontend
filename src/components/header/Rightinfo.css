@@ -1,0 +1,83 @@
+.company__logo__container {
+    margin: 0.5rem;
+    width: 30%;
+    
+}
+
+.company__name__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+}
+
+.company__name {
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px rgba(214, 239, 238, 0.575), 0 0 5px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0);
+    align-items: center;
+    font-size: 22px;
+}
+.company__logo{
+    height: 80px !important;
+    width: 80px !important;
+    margin: auto;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .company__logo__container{
+        width: 30% !important;
+    }
+    .company__name__container{
+        width: 70% !important;
+    }
+ }
+ @media only screen and (min-width: 653px) and (max-width: 740px) {
+    .company__name {
+        color: white;
+        text-shadow: 1px 1px 2px black, 0 0 25px rgba(214, 239, 238, 0.575), 0 0 5px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0);
+        align-items: center;
+        font-size: 15px;
+    }
+    .company__logo{
+        height: 60px !important;
+        width: 60px !important;
+        margin: auto;
+    }
+ }
+ @media only screen and (min-width: 844px) and (max-width: 915px) {
+    .company__name {
+        color: white;
+        text-shadow: 1px 1px 2px black, 0 0 25px rgba(214, 239, 238, 0.575), 0 0 5px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0);
+        align-items: center;
+        font-size: 15px;
+    }
+    .company__logo{
+        height: 60px !important;
+        width: 60px !important;
+        margin: auto;
+    }
+ }
+ @media only screen and (min-width: 901px) and (max-width: 920px){
+    .company__logo{
+        height: 60px !important;
+        width: 60px !important;
+        margin: auto;
+    }
+    .company__name {
+        color: white;
+        text-shadow: 1px 1px 2px black, 0 0 25px rgba(214, 239, 238, 0.575), 0 0 5px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0);
+        align-items: center;
+        font-size: 15px;
+    }
+ }
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) { }
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) { }
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) { }
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) { }

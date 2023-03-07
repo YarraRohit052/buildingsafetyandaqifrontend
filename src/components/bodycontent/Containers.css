@@ -1,0 +1,412 @@
+.parent__card {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    background: linear-gradient(120deg, #7f7f7f, #191919, #7f7f7f) !important;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
+.child__card1 {
+    width: 30%;
+    margin: auto;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+    display: flex;
+    background-color: black !important;
+}
+.child__card2 {
+    width: 30%;
+    margin: auto;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+    display: flex;
+    background-color: black !important;
+}
+.child__card3 {
+    width: 30%;
+    margin: auto;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+    display: flex;
+    background-color:black !important;
+}
+.head1{
+    text-align: center;
+    width: 100%;
+    padding-top: 10px;
+    font-size: 30px;
+    color:#d5c4ff;
+    text-shadow: 1px 1px 2px black, 0 0 25px rgba(214, 239, 238, 0.575), 0 0 1px rgb(0, 0, 0), 0 0 1px rgb(0, 0, 0), 0 0 1px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0);
+}
+.child__card1__head{
+    text-align: center;
+}
+.row__main__card{
+    width: 100%;
+    text-align: center;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.col__text{
+    font-weight: bolder;
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px rgba(214, 239, 238, 0.575), 0 0 5px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0);
+    margin-top: 0.5rem;
+}
+.col__twelve__text{
+    font-weight: bolder;
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px rgba(214, 239, 238, 0.575), 0 0 5px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0);
+}
+.row__card{
+    width: 100%;
+    text-align: center;
+}
+.input__text{
+    border-style: solid;
+    border-color: #00bfff;
+    border-radius: 5rem;
+    border-width: 0.2px;
+}
+.box div input {
+    color: white !important;
+    text-shadow: 1px 1px 2px black, 0 0 25px rgba(214, 239, 238, 0.575), 0 0 5px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0);
+    text-align: center;
+    font-weight: bolder;
+    background-color:#0E0E10 !important;
+}
+.alert__button{
+    box-shadow: 0px 0px 10px black;
+    margin-top: 5px;
+}
+.fire__detector__button{
+    margin-top: 5px;
+    box-shadow: 0px 0px 10px black;
+}
+@media only screen and (max-width: 600px) {
+    .parent__card {
+        margin-top: 14.5rem;
+    }
+    .child__card1{
+        width: 100%;
+    }
+    .child__card2{
+        width: 100%;
+    }
+    .child__card3{
+        width: 100%;
+    }
+    .parent__card {
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        background-color: #C0DFD9 !important;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    .head1{
+        font-size: 15px;
+    }
+    .alert__button{
+        margin-top: 20px;
+        box-shadow: 0px 0px 10px black;
+    }
+}
+@media only screen and (min-width: 375px) and (max-width: 376px) {
+    .alert__button{
+        
+        margin-top: 20px;
+        box-shadow: 0px 0px 10px black;
+    }
+    .fire__detector__button{
+        margin-top: 7px;
+        box-shadow: 0px 0px 10px black;
+    }
+}
+@media only screen and (min-width: 280px) and (max-width: 281px) {
+    .fire__detector__button{
+        margin-top: 1px;
+        box-shadow: 0px 0px 10px black;
+    }
+}
+@media only screen and (min-width: 414px) and (max-width: 415px) {
+    .fire__detector__button{
+        margin-top: 8px;
+        box-shadow: 0px 0px 10px black;
+    }
+}
+@media only screen and (min-width: 390px) and (max-width: 394px) {
+    .alert__button{
+        margin-top: 20px;
+        box-shadow: 0px 0px 10px black;
+    }
+    .fire__detector__button{
+        margin-top: 8px;
+        box-shadow: 0px 0px 10px black;
+    }
+}
+@media only screen and (min-width: 360px) and (max-width: 361px) {
+    .alert__button{
+        margin-top: 20px;
+        box-shadow: 0px 0px 10px black;
+    }
+    .fire__detector__button{
+        margin-top: 8px;
+        box-shadow: 0px 0px 10px black;
+    }
+}
+@media only screen and (min-width: 412px) and (max-width: 413px) {
+    .fire__detector__button{
+        margin-top: 8px;
+        box-shadow: 0px 0px 10px black;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 769px) {
+    .alert__button{
+        margin-top: 20px;
+        box-shadow: 0px 0px 10px black;
+    }
+}
+@media only screen and (min-width: 820px) and (max-width: 821px) {
+    .alert__button{
+        margin-top: 20px;
+        box-shadow: 0px 0px 10px black;
+    }
+}
+@media only screen and (min-width: 912px) and (max-width: 913px) {
+    .alert__button{
+        margin-top: 20px;
+        box-shadow: 0px 0px 10px black;
+    }
+}
+@media only screen and (min-width: 540px) and (max-width: 541px) {
+    .alert__button{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        box-shadow: 0px 0px 10px black;
+    }
+}
+@media only screen and (min-width: 280px) and (max-width: 281px) {
+    .alert__button{
+        margin-top: 25px;
+        margin-bottom: 10px;
+        box-shadow: 0px 0px 10px black;
+    }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1025px) {
+    .alert__button{
+        margin-top: 30px;
+        margin-bottom: 10px;
+        box-shadow: 0px 0px 10px black;
+    }
+    .fire__detector__button{
+        margin-top: 8px;
+        box-shadow: 0px 0px 10px black;
+    }
+}
+@media only screen and (min-width: 1280px) and (max-width: 1281px) {
+    .alert__button{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        box-shadow: 0px 0px 10px black;
+    }
+}
+@media only screen and (min-width: 2266px) and (max-width: 2267px) {
+    .alert__button{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        box-shadow: 0px 0px 10px black;
+    }
+}
+@media only screen and (min-width: 512px) and (max-width: 513px) {
+    .alert__button{
+        margin-top: 8px;
+        margin-bottom: 10px;
+        box-shadow: 0px 0px 10px black;
+    }
+}
+@media only screen and (min-width: 667px) and (max-width: 668px) {
+    .alert__button{
+        margin-top: 20px;
+        margin-bottom: 10px;
+        box-shadow: 0px 0px 10px black;
+    }
+    .fire__detector__button{
+        margin-top: 12px;
+        box-shadow: 0px 0px 10px black;
+    }
+    .col__text{
+        font-size: 10px;
+        padding-top: 5px;
+        padding-left: 3px;
+    }
+}
+@media only screen and (min-width: 740px) and (max-width: 741px) {
+    .alert__button{
+        margin-top: 20px;
+        margin-bottom: 10px;
+        box-shadow: 0px 0px 10px black;
+    }
+    .fire__detector__button{
+        margin-top: 8px;
+        box-shadow: 0px 0px 10px black;
+    }
+    .col__text{
+        font-size: 10px;
+        padding-top: 5px;
+        padding-left: 3px;
+    }
+}
+@media only screen and (min-width: 896px) and (max-width: 897px) {
+    .alert__button{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        box-shadow: 0px 0px 10px black;
+    }
+    .col__text{
+        font-size: 10px;
+        padding-top: 5px;
+        padding-left: 3px;
+    }
+}
+@media only screen and (min-width: 844px) and (max-width: 852px) {
+    .alert__button{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        box-shadow: 0px 0px 10px black;
+    }
+    .col__text{
+        font-size: 10px;
+        padding-top: 5px;
+        padding-left: 3px;
+    }
+}
+@media only screen and (min-width: 914px) and (max-width: 916px) {
+    .alert__button{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        box-shadow: 0px 0px 10px black;
+    }
+    .col__text{
+        font-size: 10px;
+        padding-top: 5px;
+        padding-left: 3px;
+    }
+}
+@media only screen and (min-width: 1180px) and (max-width: 1181px) {
+    .alert__button{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        box-shadow: 0px 0px 10px black;
+    }
+    .col__text{
+        font-size: 10px;
+        padding-top: 5px;
+        padding-left: 3px;
+    }
+}
+@media only screen and (min-width: 1368px) and (max-width: 1369px) {
+    .alert__button{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        box-shadow: 0px 0px 10px black;
+    }
+    .col__text{
+        font-size: 10px;
+        padding-top: 5px;
+        padding-left: 3px;
+    }
+}
+@media only screen and (min-width: 720px) and (max-width: 721px) {
+    .alert__button{
+        margin-top: 20px;
+        margin-bottom: 10px;
+        box-shadow: 0px 0px 10px black;
+    }
+    .col__text{
+        font-size: 10px;
+        padding-top: 5px;
+        padding-left: 3px;
+    }
+    .fire__detector__button{
+        margin-top: 8px;
+        box-shadow: 0px 0px 10px black;
+    }
+}
+@media only screen and (min-width: 653px) and (max-width: 654px) {
+    .alert__button{
+        margin-top: 18px;
+        margin-bottom: 10px;
+        box-shadow: 0px 0px 10px black;
+    }
+    .col__text{
+        font-size: 10px;
+        padding-top: 5px;
+        padding-left: 3px;
+    }
+}
+@media only screen and (min-width: 717px) and (max-width: 718px) {
+    .alert__button{
+        margin-top: 20px;
+        margin-bottom: 10px;
+        box-shadow: 0px 0px 10px black;
+    }
+    .col__text{
+        font-size: 10px;
+        padding-top: 5px;
+        padding-left: 3px;
+    }
+    .fire__detector__button{
+        margin-top: 8px;
+        box-shadow: 0px 0px 10px black;
+    }
+}
+@media only screen and (min-width: 2560px) and (max-width: 2561px) {
+    .alert__button{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        box-shadow: 0px 0px 10px black;
+    }
+    .col__text{
+        font-size: 10px;
+        padding-top: 5px;
+        padding-left: 3px;
+    }
+}
+@media only screen and (min-width: 1114px) and (max-width: 1115px) {
+    .alert__button{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        box-shadow: 0px 0px 10px black;
+    }
+    .col__text{
+        font-size: 10px;
+        padding-top: 5px;
+        padding-left: 3px;
+    }
+}
+@media only screen and (min-width: 1133px) and (max-width: 1134px){
+    .alert__button{
+        margin-top: 20px;
+        margin-bottom: 10px;
+        box-shadow: 0px 0px 10px black;
+    }
+    .fire__detector__button{
+        margin-top: 8px;
+        box-shadow: 0px 0px 10px black;
+    }
+}
+@media only screen and (min-width: 1440px) and (max-width: 1441px){
+    .alert__button{
+        margin-top: 20px;
+        margin-bottom: 10px;
+        box-shadow: 0px 0px 10px black;
+    }
+    .fire__detector__button{
+        margin-top: 8px;
+        box-shadow: 0px 0px 10px black;
+    }
+}
