@@ -7,8 +7,8 @@ const Containers = () => {
     const [aqi, setAQI] = useState();
     const [gasdetector, setGasdetector] = useState();
     const [firedetector, setFiredetector] = useState();
-    const alertIsTrue = (temperature >= 50 || gasdetector >= 30 || firedetector === 1);
     const alertIsTrue1 = (firedetector === 1);
+    const alertIsTrue2 = (gasdetector === 1);
     // useEffect(() => {
     //     const requestOptions = {
     //         method: "GET",
@@ -23,7 +23,7 @@ const Containers = () => {
     // }, []);
     useEffect(() => {
         setInterval(() => {
-            fetch("https://buildingsafetyandaqibackend.onrender.com/api/sensordata")
+            fetch("https://buildingsafetyandaqibackend.onrender.com/api/sensordata/api/sensordata")
                 .then(async result => {
                     const data = await result.json();
                     setTemperature(data.temperature);
@@ -78,7 +78,18 @@ const Containers = () => {
                             <p className="col__text">GAS DETECTOR</p>
                         </div>
                         <div className="col-6">
-                            <Input label="" value={gasdetector} className="rainbow-p-around_medium  input__text box" disabled />
+                            <div className="row">
+                                <div className="col-2 col-md-4"></div>
+                                <div className="col-8 col-md-4 d-flex justify-content-center align-items-center">
+                                    <div className="d-flex justify-content-center align-items-center">
+                                        <div className="rainbow-p-around_medium alert__button fire__detector__button"
+                                            style={{
+                                                width: '30px', height: '30px', borderRadius: '50%', backgroundColor: alertIsTrue2 ? 'red' : 'green'
+                                            }} />
+                                    </div>
+                                </div>
+                                <div className="col-2 col-md-4"></div>
+                            </div>
                         </div>
                     </div>
                     <div className="row row__card">
@@ -102,21 +113,10 @@ const Containers = () => {
                     </div>
                     <div className="row row__card">
                         <div className="col-6">
-                            <p className="col__text">FIRE EXTINGUSHER MOTOR</p>
+                            <p className="col__text fire__extinguisher">STATUS OF FIRE EXTINGUISHER MOTOR</p>
                         </div>
                         <div className="col-6 card-container">
-                            <div className="row">
-                                <div className="col-2 col-md-4"></div>
-                                <div className="col-8 col-md-4 d-flex justify-content-center align-items-center">
-                                    <div className="d-flex justify-content-center align-items-center">
-                                        <div className="rainbow-p-around_medium alert__button"
-                                            style={{
-                                                width: '30px', height: '30px', borderRadius: '50%', backgroundColor: alertIsTrue ? 'red' : 'green'
-                                            }} />
-                                    </div>
-                                </div>
-                                <div className="col-2 col-md-4"></div>
-                            </div>
+                            <Input label="" value={alertIsTrue1 ? "ON" : "OFF"} className="rainbow-p-around_medium input__text box fire__extinguisher fire__extinguisher__input" disabled />
                         </div>
                     </div>
                 </Card>
@@ -155,7 +155,18 @@ const Containers = () => {
                             <p className="col__text">GAS DETECTOR</p>
                         </div>
                         <div className="col-6">
-                            <Input label="" value={gasdetector} className="rainbow-p-around_medium  input__text box" disabled />
+                           <div className="row">
+                                <div className="col-2 col-md-4"></div>
+                                <div className="col-8 col-md-4 d-flex justify-content-center align-items-center">
+                                    <div className="d-flex justify-content-center align-items-center">
+                                        <div className="rainbow-p-around_medium alert__button fire__detector__button"
+                                            style={{
+                                                width: '30px', height: '30px', borderRadius: '50%', backgroundColor: alertIsTrue2 ? 'red' : 'green'
+                                            }} />
+                                    </div>
+                                </div>
+                                <div className="col-2 col-md-4"></div>
+                            </div>
                         </div>
                     </div>
                     <div className="row row__card">
@@ -163,7 +174,7 @@ const Containers = () => {
                             <p className="col__text fire__detector">FIRE DETECTOR</p>
                         </div>
                         <div className="col-6 card-container">
-                             <div className="row">
+                            <div className="row">
                                 <div className="col-2 col-md-4"></div>
                                 <div className="col-8 col-md-4 d-flex justify-content-center align-items-center">
                                     <div className="d-flex justify-content-center align-items-center">
@@ -179,21 +190,10 @@ const Containers = () => {
                     </div>
                     <div className="row row__card">
                         <div className="col-6">
-                            <p className="col__text">FIRE EXTINGUSHER MOTOR</p>
+                            <p className="col__text fire__extinguisher">STATUS OF FIRE EXTINGUISHER MOTOR</p>
                         </div>
-                        <div className="col-6">
-                            <div className="row">
-                                <div className="col-2 col-md-4"></div>
-                                <div className="col-8 col-md-4 d-flex justify-content-center align-items-center">
-                                    <div className="d-flex justify-content-center align-items-center">
-                                        <div className="rainbow-p-around_medium alert__button"
-                                            style={{
-                                                width: '30px', height: '30px', borderRadius: '50%', backgroundColor: alertIsTrue ? 'red' : 'green'
-                                            }} />
-                                    </div>
-                                </div>
-                                <div className="col-2 col-md-4"></div>
-                            </div>
+                        <div className="col-6 card-container">
+                            <Input label="" value={alertIsTrue1 ? "ON" : "OFF"} className="rainbow-p-around_medium input__text box fire__extinguisher fire__extinguisher__input" disabled />
                         </div>
                     </div>
                 </Card>
@@ -232,7 +232,18 @@ const Containers = () => {
                             <p className="col__text">GAS DETECTOR</p>
                         </div>
                         <div className="col-6">
-                            <Input label="" value={gasdetector} className="rainbow-p-around_medium  input__text box" disabled />
+                           <div className="row">
+                                <div className="col-2 col-md-4"></div>
+                                <div className="col-8 col-md-4 d-flex justify-content-center align-items-center">
+                                    <div className="d-flex justify-content-center align-items-center">
+                                        <div className="rainbow-p-around_medium alert__button fire__detector__button"
+                                            style={{
+                                                width: '30px', height: '30px', borderRadius: '50%', backgroundColor: alertIsTrue2 ? 'red' : 'green'
+                                            }} />
+                                    </div>
+                                </div>
+                                <div className="col-2 col-md-4"></div>
+                            </div>
                         </div>
                     </div>
                     <div className="row row__card">
@@ -240,7 +251,7 @@ const Containers = () => {
                             <p className="col__text fire__detector">FIRE DETECTOR</p>
                         </div>
                         <div className="col-6 card-container">
-                             <div className="row">
+                            <div className="row">
                                 <div className="col-2 col-md-4"></div>
                                 <div className="col-8 col-md-4 d-flex justify-content-center align-items-center">
                                     <div className="d-flex justify-content-center align-items-center">
@@ -256,21 +267,10 @@ const Containers = () => {
                     </div>
                     <div className="row row__card">
                         <div className="col-6">
-                            <p className="col__text">FIRE EXTINGUSHER MOTOR</p>
+                            <p className="col__text fire__extinguisher">STATUS OF FIRE EXTINGUISHER MOTOR</p>
                         </div>
-                        <div className="col-6">
-                            <div className="row">
-                                <div className="col-2 col-md-4"></div>
-                                <div className="col-8 col-md-4 d-flex justify-content-center align-items-center">
-                                    <div className="d-flex justify-content-center align-items-center">
-                                        <div className="rainbow-p-around_medium alert__button"
-                                            style={{
-                                                width: '30px', height: '30px', borderRadius: '50%', backgroundColor: alertIsTrue ? 'red' : 'green'
-                                            }} />
-                                    </div>
-                                </div>
-                                <div className="col-2 col-md-4"></div>
-                            </div>
+                        <div className="col-6 card-container">
+                            <Input label="" value={alertIsTrue1 ? "ON" : "OFF"} className="rainbow-p-around_medium input__text box fire__extinguisher fire__extinguisher__input" disabled />
                         </div>
                     </div>
                 </Card>
@@ -312,7 +312,18 @@ const Containers = () => {
                             <p className="col__text">GAS DETECTOR</p>
                         </div>
                         <div className="col-6">
-                            <Input label="" value={gasdetector} className="rainbow-p-around_medium  input__text box" disabled />
+                           <div className="row">
+                                <div className="col-2 col-md-4"></div>
+                                <div className="col-8 col-md-4 d-flex justify-content-center align-items-center">
+                                    <div className="d-flex justify-content-center align-items-center">
+                                        <div className="rainbow-p-around_medium alert__button fire__detector__button"
+                                            style={{
+                                                width: '30px', height: '30px', borderRadius: '50%', backgroundColor: alertIsTrue2 ? 'red' : 'green'
+                                            }} />
+                                    </div>
+                                </div>
+                                <div className="col-2 col-md-4"></div>
+                            </div>
                         </div>
                     </div>
                     <div className="row row__card">
@@ -320,7 +331,7 @@ const Containers = () => {
                             <p className="col__text fire__detector">FIRE DETECTOR</p>
                         </div>
                         <div className="col-6 card-container">
-                             <div className="row">
+                            <div className="row">
                                 <div className="col-2 col-md-4"></div>
                                 <div className="col-8 col-md-4 d-flex justify-content-center align-items-center">
                                     <div className="d-flex justify-content-center align-items-center">
@@ -336,21 +347,10 @@ const Containers = () => {
                     </div>
                     <div className="row row__card">
                         <div className="col-6">
-                            <p className="col__text">FIRE EXTINGUSHER MOTOR</p>
+                            <p className="col__text fire__extinguisher">STATUS OF FIRE EXTINGUISHER MOTOR</p>
                         </div>
-                        <div className="col-6">
-                            <div className="row">
-                                <div className="col-2 col-md-4"></div>
-                                <div className="col-8 col-md-4 d-flex justify-content-center align-items-center">
-                                    <div className="d-flex justify-content-center align-items-center">
-                                        <div className="rainbow-p-around_medium alert__button"
-                                            style={{
-                                                width: '30px', height: '30px', borderRadius: '50%', backgroundColor: alertIsTrue ? 'red' : 'green'
-                                            }} />
-                                    </div>
-                                </div>
-                                <div className="col-2 col-md-4"></div>
-                            </div>
+                        <div className="col-6 card-container">
+                            <Input label="" value={alertIsTrue1 ? "ON" : "OFF"} className="rainbow-p-around_medium input__text box fire__extinguisher fire__extinguisher__input" disabled />
                         </div>
                     </div>
                 </Card>
@@ -389,7 +389,18 @@ const Containers = () => {
                             <p className="col__text">GAS DETECTOR</p>
                         </div>
                         <div className="col-6">
-                            <Input label="" value={gasdetector} className="rainbow-p-around_medium  input__text box" disabled />
+                           <div className="row">
+                                <div className="col-2 col-md-4"></div>
+                                <div className="col-8 col-md-4 d-flex justify-content-center align-items-center">
+                                    <div className="d-flex justify-content-center align-items-center">
+                                        <div className="rainbow-p-around_medium alert__button fire__detector__button"
+                                            style={{
+                                                width: '30px', height: '30px', borderRadius: '50%', backgroundColor: alertIsTrue2 ? 'red' : 'green'
+                                            }} />
+                                    </div>
+                                </div>
+                                <div className="col-2 col-md-4"></div>
+                            </div>
                         </div>
                     </div>
                     <div className="row row__card">
@@ -397,7 +408,7 @@ const Containers = () => {
                             <p className="col__text fire__detector">FIRE DETECTOR</p>
                         </div>
                         <div className="col-6 card-container">
-                             <div className="row">
+                            <div className="row">
                                 <div className="col-2 col-md-4"></div>
                                 <div className="col-8 col-md-4 d-flex justify-content-center align-items-center">
                                     <div className="d-flex justify-content-center align-items-center">
@@ -413,21 +424,10 @@ const Containers = () => {
                     </div>
                     <div className="row row__card">
                         <div className="col-6">
-                            <p className="col__text">FIRE EXTINGUSHER MOTOR</p>
+                            <p className="col__text fire__extinguisher">STATUS OF FIRE EXTINGUISHER MOTOR</p>
                         </div>
-                        <div className="col-6">
-                            <div className="row">
-                                <div className="col-2 col-md-4"></div>
-                                <div className="col-8 col-md-4 d-flex justify-content-center align-items-center">
-                                    <div className="d-flex justify-content-center align-items-center">
-                                        <div className="rainbow-p-around_medium alert__button"
-                                            style={{
-                                                width: '30px', height: '30px', borderRadius: '50%', backgroundColor: alertIsTrue ? 'red' : 'green'
-                                            }} />
-                                    </div>
-                                </div>
-                                <div className="col-2 col-md-4"></div>
-                            </div>
+                        <div className="col-6 card-container">
+                            <Input label="" value={alertIsTrue1 ? "ON" : "OFF"} className="rainbow-p-around_medium input__text box fire__extinguisher fire__extinguisher__input" disabled />
                         </div>
                     </div>
                 </Card>
@@ -466,7 +466,18 @@ const Containers = () => {
                             <p className="col__text">GAS DETECTOR</p>
                         </div>
                         <div className="col-6">
-                            <Input label="" value={gasdetector} className="rainbow-p-around_medium  input__text box" disabled />
+                           <div className="row">
+                                <div className="col-2 col-md-4"></div>
+                                <div className="col-8 col-md-4 d-flex justify-content-center align-items-center">
+                                    <div className="d-flex justify-content-center align-items-center">
+                                        <div className="rainbow-p-around_medium alert__button fire__detector__button"
+                                            style={{
+                                                width: '30px', height: '30px', borderRadius: '50%', backgroundColor: alertIsTrue2 ? 'red' : 'green'
+                                            }} />
+                                    </div>
+                                </div>
+                                <div className="col-2 col-md-4"></div>
+                            </div>
                         </div>
                     </div>
                     <div className="row row__card">
@@ -474,7 +485,7 @@ const Containers = () => {
                             <p className="col__text fire__detector">FIRE DETECTOR</p>
                         </div>
                         <div className="col-6 card-container">
-                             <div className="row">
+                            <div className="row">
                                 <div className="col-2 col-md-4"></div>
                                 <div className="col-8 col-md-4 d-flex justify-content-center align-items-center">
                                     <div className="d-flex justify-content-center align-items-center">
@@ -490,21 +501,10 @@ const Containers = () => {
                     </div>
                     <div className="row row__card">
                         <div className="col-6">
-                            <p className="col__text">FIRE EXTINGUSHER MOTOR</p>
+                            <p className="col__text fire__extinguisher">STATUS OF FIRE EXTINGUISHER MOTOR</p>
                         </div>
-                        <div className="col-6">
-                            <div className="row">
-                                <div className="col-2 col-md-4"></div>
-                                <div className="col-8 col-md-4 d-flex justify-content-center align-items-center">
-                                    <div className="d-flex justify-content-center align-items-center">
-                                        <div className="rainbow-p-around_medium alert__button"
-                                            style={{
-                                                width: '30px', height: '30px', borderRadius: '50%', backgroundColor: alertIsTrue ? 'red' : 'green'
-                                            }} />
-                                    </div>
-                                </div>
-                                <div className="col-2 col-md-4"></div>
-                            </div>
+                        <div className="col-6 card-container">
+                            <Input label="" value={alertIsTrue1 ? "ON" : "OFF"} className="rainbow-p-around_medium input__text box fire__extinguisher fire__extinguisher__input" disabled />
                         </div>
                     </div>
                 </Card>
@@ -546,7 +546,18 @@ const Containers = () => {
                             <p className="col__text">GAS DETECTOR</p>
                         </div>
                         <div className="col-6">
-                            <Input label="" value={gasdetector} className="rainbow-p-around_medium  input__text box" disabled />
+                           <div className="row">
+                                <div className="col-2 col-md-4"></div>
+                                <div className="col-8 col-md-4 d-flex justify-content-center align-items-center">
+                                    <div className="d-flex justify-content-center align-items-center">
+                                        <div className="rainbow-p-around_medium alert__button fire__detector__button"
+                                            style={{
+                                                width: '30px', height: '30px', borderRadius: '50%', backgroundColor: alertIsTrue2 ? 'red' : 'green'
+                                            }} />
+                                    </div>
+                                </div>
+                                <div className="col-2 col-md-4"></div>
+                            </div>
                         </div>
                     </div>
                     <div className="row row__card">
@@ -554,7 +565,7 @@ const Containers = () => {
                             <p className="col__text fire__detector">FIRE DETECTOR</p>
                         </div>
                         <div className="col-6 card-container">
-                             <div className="row">
+                            <div className="row">
                                 <div className="col-2 col-md-4"></div>
                                 <div className="col-8 col-md-4 d-flex justify-content-center align-items-center">
                                     <div className="d-flex justify-content-center align-items-center">
@@ -570,21 +581,10 @@ const Containers = () => {
                     </div>
                     <div className="row row__card">
                         <div className="col-6">
-                            <p className="col__text">FIRE EXTINGUSHER MOTOR</p>
+                            <p className="col__text fire__extinguisher">STATUS OF FIRE EXTINGUISHER MOTOR</p>
                         </div>
-                        <div className="col-6">
-                            <div className="row">
-                                <div className="col-2 col-md-4"></div>
-                                <div className="col-8 col-md-4 d-flex justify-content-center align-items-center">
-                                    <div className="d-flex justify-content-center align-items-center">
-                                        <div className="rainbow-p-around_medium alert__button"
-                                            style={{
-                                                width: '30px', height: '30px', borderRadius: '50%', backgroundColor: alertIsTrue ? 'red' : 'green'
-                                            }} />
-                                    </div>
-                                </div>
-                                <div className="col-2 col-md-4"></div>
-                            </div>
+                        <div className="col-6 card-container">
+                            <Input label="" value={alertIsTrue1 ? "ON" : "OFF"} className="rainbow-p-around_medium input__text box fire__extinguisher fire__extinguisher__input" disabled />
                         </div>
                     </div>
                 </Card>
@@ -623,7 +623,18 @@ const Containers = () => {
                             <p className="col__text">GAS DETECTOR</p>
                         </div>
                         <div className="col-6">
-                            <Input label="" value={gasdetector} className="rainbow-p-around_medium  input__text box" disabled />
+                           <div className="row">
+                                <div className="col-2 col-md-4"></div>
+                                <div className="col-8 col-md-4 d-flex justify-content-center align-items-center">
+                                    <div className="d-flex justify-content-center align-items-center">
+                                        <div className="rainbow-p-around_medium alert__button fire__detector__button"
+                                            style={{
+                                                width: '30px', height: '30px', borderRadius: '50%', backgroundColor: alertIsTrue2 ? 'red' : 'green'
+                                            }} />
+                                    </div>
+                                </div>
+                                <div className="col-2 col-md-4"></div>
+                            </div>
                         </div>
                     </div>
                     <div className="row row__card">
@@ -631,7 +642,7 @@ const Containers = () => {
                             <p className="col__text fire__detector">FIRE DETECTOR</p>
                         </div>
                         <div className="col-6 card-container">
-                             <div className="row">
+                            <div className="row">
                                 <div className="col-2 col-md-4"></div>
                                 <div className="col-8 col-md-4 d-flex justify-content-center align-items-center">
                                     <div className="d-flex justify-content-center align-items-center">
@@ -647,21 +658,10 @@ const Containers = () => {
                     </div>
                     <div className="row row__card">
                         <div className="col-6">
-                            <p className="col__text">FIRE EXTINGUSHER MOTOR</p>
+                            <p className="col__text fire__extinguisher">STATUS OF FIRE EXTINGUISHER MOTOR</p>
                         </div>
-                        <div className="col-6">
-                            <div className="row">
-                                <div className="col-2 col-md-4"></div>
-                                <div className="col-8 col-md-4 d-flex justify-content-center align-items-center">
-                                    <div className="d-flex justify-content-center align-items-center">
-                                        <div className="rainbow-p-around_medium alert__button"
-                                            style={{
-                                                width: '30px', height: '30px', borderRadius: '50%', backgroundColor: alertIsTrue ? 'red' : 'green'
-                                            }} />
-                                    </div>
-                                </div>
-                                <div className="col-2 col-md-4"></div>
-                            </div>
+                        <div className="col-6 card-container">
+                            <Input label="" value={alertIsTrue1 ? "ON" : "OFF"} className="rainbow-p-around_medium input__text box fire__extinguisher fire__extinguisher__input" disabled />
                         </div>
                     </div>
                 </Card>
@@ -700,7 +700,18 @@ const Containers = () => {
                             <p className="col__text">GAS DETECTOR</p>
                         </div>
                         <div className="col-6">
-                            <Input label="" value={gasdetector} className="rainbow-p-around_medium  input__text box" disabled />
+                           <div className="row">
+                                <div className="col-2 col-md-4"></div>
+                                <div className="col-8 col-md-4 d-flex justify-content-center align-items-center">
+                                    <div className="d-flex justify-content-center align-items-center">
+                                        <div className="rainbow-p-around_medium alert__button fire__detector__button"
+                                            style={{
+                                                width: '30px', height: '30px', borderRadius: '50%', backgroundColor: alertIsTrue2 ? 'red' : 'green'
+                                            }} />
+                                    </div>
+                                </div>
+                                <div className="col-2 col-md-4"></div>
+                            </div>
                         </div>
                     </div>
                     <div className="row row__card">
@@ -708,7 +719,7 @@ const Containers = () => {
                             <p className="col__text fire__detector">FIRE DETECTOR</p>
                         </div>
                         <div className="col-6 card-container">
-                        <div className="row">
+                            <div className="row">
                                 <div className="col-2 col-md-4"></div>
                                 <div className="col-8 col-md-4 d-flex justify-content-center align-items-center">
                                     <div className="d-flex justify-content-center align-items-center">
@@ -724,21 +735,10 @@ const Containers = () => {
                     </div>
                     <div className="row row__card">
                         <div className="col-6">
-                            <p className="col__text">FIRE EXTINGUSHER MOTOR</p>
+                            <p className="col__text fire__extinguisher">STATUS OF FIRE EXTINGUISHER MOTOR</p>
                         </div>
-                        <div className="col-6">
-                            <div className="row">
-                                <div className="col-2 col-md-4"></div>
-                                <div className="col-8 col-md-4 d-flex justify-content-center align-items-center">
-                                    <div className="d-flex justify-content-center align-items-center">
-                                        <div className="rainbow-p-around_medium alert__button"
-                                            style={{
-                                                width: '30px', height: '30px', borderRadius: '50%', backgroundColor: alertIsTrue ? 'red' : 'green'
-                                            }} />
-                                    </div>
-                                </div>
-                                <div className="col-2 col-md-4"></div>
-                            </div>
+                        <div className="col-6 card-container">
+                            <Input label="" value={alertIsTrue1 ? "ON" : "OFF"} className="rainbow-p-around_medium input__text box fire__extinguisher fire__extinguisher__input" disabled />
                         </div>
                     </div>
                 </Card>

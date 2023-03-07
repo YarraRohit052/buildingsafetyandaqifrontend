@@ -60,6 +60,7 @@
     font-weight: bolder;
     color: white;
     text-shadow: 1px 1px 2px black, 0 0 25px rgba(214, 239, 238, 0.575), 0 0 5px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0);
+    text-align: center !important;
 }
 .row__card{
     width: 100%;
@@ -114,6 +115,10 @@
         margin-top: 20px;
         box-shadow: 0px 0px 10px black;
     }
+    .fire__extinguisher{
+        margin-top: 20px;
+        font-size: 12px;
+    }
 }
 @media only screen and (min-width: 375px) and (max-width: 376px) {
     .alert__button{
@@ -136,6 +141,9 @@
     .fire__detector__button{
         margin-top: 8px;
         box-shadow: 0px 0px 10px black;
+    }
+    .fire__extinguisher{
+        margin-top: 10px;
     }
 }
 @media only screen and (min-width: 390px) and (max-width: 394px) {
@@ -163,11 +171,19 @@
         margin-top: 8px;
         box-shadow: 0px 0px 10px black;
     }
+    .fire__extinguisher{
+        margin-top: 15px;
+        font-size: 15px;
+    }
 }
 @media only screen and (min-width: 768px) and (max-width: 769px) {
     .alert__button{
         margin-top: 20px;
         box-shadow: 0px 0px 10px black;
+    }
+    .fire__extinguisher{
+        margin-top: 30px;
+        font-size: 10px;
     }
 }
 @media only screen and (min-width: 820px) and (max-width: 821px) {
@@ -175,11 +191,22 @@
         margin-top: 20px;
         box-shadow: 0px 0px 10px black;
     }
+    .fire__extinguisher{
+        margin-top: 30px;
+        font-size: 10px;
+    }
 }
 @media only screen and (min-width: 912px) and (max-width: 913px) {
     .alert__button{
         margin-top: 20px;
         box-shadow: 0px 0px 10px black;
+    }
+    .fire__extinguisher{
+        font-size: 10px;
+        padding-left: 2px;
+    }
+    .fire__extinguisher__input{
+        margin-top: 12px;
     }
 }
 @media only screen and (min-width: 540px) and (max-width: 541px) {
@@ -187,6 +214,10 @@
         margin-top: 10px;
         margin-bottom: 10px;
         box-shadow: 0px 0px 10px black;
+    }
+    .fire__extinguisher{
+        margin-bottom: 20px;
+        font-size: 15px;
     }
 }
 @media only screen and (min-width: 280px) and (max-width: 281px) {
@@ -227,6 +258,9 @@
         margin-bottom: 10px;
         box-shadow: 0px 0px 10px black;
     }
+    .fire__extinguisher__input{
+        margin-top: 5px;
+    }
 }
 @media only screen and (min-width: 667px) and (max-width: 668px) {
     .alert__button{
@@ -242,6 +276,9 @@
         font-size: 10px;
         padding-top: 5px;
         padding-left: 3px;
+    }
+    .fire__extinguisher__input{
+        margin-top: 17px;
     }
 }
 @media only screen and (min-width: 740px) and (max-width: 741px) {
@@ -259,12 +296,18 @@
         padding-top: 5px;
         padding-left: 3px;
     }
+    .fire__extinguisher__input{
+        margin-top: 15px;
+    }
 }
 @media only screen and (min-width: 896px) and (max-width: 897px) {
     .alert__button{
         margin-top: 10px;
         margin-bottom: 10px;
         box-shadow: 0px 0px 10px black;
+    }
+    .fire__extinguisher__input{
+        margin-top: 15px;
     }
     .col__text{
         font-size: 10px;
@@ -283,6 +326,9 @@
         padding-top: 5px;
         padding-left: 3px;
     }
+    .fire__extinguisher__input{
+        margin-top: 15px;
+    }
 }
 @media only screen and (min-width: 914px) and (max-width: 916px) {
     .alert__button{
@@ -295,6 +341,12 @@
         padding-top: 5px;
         padding-left: 3px;
     }
+    .fire__extinguisher{
+        margin-top: 15px;
+    }
+    .fire__extinguisher__input{
+        margin-top: 17px;
+    }
 }
 @media only screen and (min-width: 1180px) and (max-width: 1181px) {
     .alert__button{
@@ -306,6 +358,9 @@
         font-size: 10px;
         padding-top: 5px;
         padding-left: 3px;
+    }
+    .fire__extinguisher__input{
+        margin-top: 10px;
     }
 }
 @media only screen and (min-width: 1368px) and (max-width: 1369px) {
@@ -335,6 +390,9 @@
         margin-top: 8px;
         box-shadow: 0px 0px 10px black;
     }
+    .fire__extinguisher__input{
+        margin-top: 15px;
+    }
 }
 @media only screen and (min-width: 653px) and (max-width: 654px) {
     .alert__button{
@@ -346,6 +404,9 @@
         font-size: 10px;
         padding-top: 5px;
         padding-left: 3px;
+    }
+    .fire__extinguisher__input{
+        margin-top: 17.5px;
     }
 }
 @media only screen and (min-width: 717px) and (max-width: 718px) {
@@ -362,6 +423,9 @@
     .fire__detector__button{
         margin-top: 8px;
         box-shadow: 0px 0px 10px black;
+    }
+    .fire__extinguisher__input{
+        margin-top: 15px;
     }
 }
 @media only screen and (min-width: 2560px) and (max-width: 2561px) {
@@ -387,6 +451,9 @@
         padding-top: 5px;
         padding-left: 3px;
     }
+    .fire__extinguisher__input{
+        margin-top: 8px;
+    }
 }
 @media only screen and (min-width: 1133px) and (max-width: 1134px){
     .alert__button{
@@ -408,5 +475,21 @@
     .fire__detector__button{
         margin-top: 8px;
         box-shadow: 0px 0px 10px black;
+    }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1025px){
+    .fire__extinguisher{
+        font-size: 15px;
+    }
+    .fire__extinguisher__input{
+        margin-top: 20px;
+    }
+}
+@media only screen and (min-width: 1280px) and (max-width: 1281px){
+    .fire__extinguisher{
+        font-size: 15px;
+    }
+    .fire__extinguisher__input{
+        margin-top: 15px;
     }
 }
