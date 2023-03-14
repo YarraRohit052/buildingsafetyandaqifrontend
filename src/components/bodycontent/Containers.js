@@ -17,7 +17,7 @@ const Containers = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch("http://localhost:5006/api/sensordata");
+                const response = await fetch("https://buildingsafetyandaqibackend.onrender.com/api/sensordata");
                 const data = await response.json();
                 setTemperature(data.temperature);
                 setHumidity(data.humidity);
