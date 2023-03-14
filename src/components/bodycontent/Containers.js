@@ -1,44 +1,59 @@
 import { Card, Input } from "react-rainbow-components";
 import "./Containers.css";
 import { useEffect, useState } from "react";
+import alertSound from "./alert.mp3";
+const alertAudio = new Audio(alertSound);
+
+
 const Containers = () => {
     const [temperature, setTemperature] = useState();
     const [humidity, setHumidity] = useState();
     const [aqi, setAQI] = useState();
     const [gasdetector, setGasdetector] = useState();
     const [firedetector, setFiredetector] = useState();
-    const alertIsTrue1 = (firedetector === 1);
-    const alertIsTrue2 = (gasdetector === 1);
-    // useEffect(() => {
-    //     const requestOptions = {
-    //         method: "GET",
-    //         headers: {
-    //             'Content-Type': 'application/json'
-    //         }
-    //     }
+    const alertIsTrue1 = firedetector === 1;
+    const alertIsTrue2 = gasdetector === 1;
 
-    //     fetch("http://localhost:5006/api/hello", requestOptions).then((result) => {
-    //         console.log(result);
-    //     })
-    // }, []);
     useEffect(() => {
-        setInterval(() => {
-            fetch("https://buildingsafetyandaqibackend.onrender.com/api/sensordata")
-                .then(async result => {
-                    const data = await result.json();
-                    setTemperature(data.temperature);
-                    setHumidity(data.humidity);
-                    setAQI(data.aqi);
-                    setGasdetector(data.gasdetector);
-                    setFiredetector(data.firedetector);
-                    //console.log(data);
-                })
-                .catch(error => {
-                    console.error(error);
-                });
-        }, 2000);
+        const fetchData = async () => {
+            try {
+                const response = await fetch("http://localhost:5006/api/sensordata");
+                const data = await response.json();
+                setTemperature(data.temperature);
+                setHumidity(data.humidity);
+                setAQI(data.aqi);
+                setGasdetector(data.gasdetector);
+                setFiredetector(data.firedetector);
+            } catch (error) {
+                console.error(error);
+            }
+        };
+
+        const intervalId = setInterval(fetchData, 10000);
+
+        return () => clearInterval(intervalId);
     }, []);
 
+    useEffect(() => {
+        let playingAlert = false;
+        let alertIntervalId;
+
+        if (alertIsTrue1 || alertIsTrue2) {
+            alertAudio.loop = true;
+            alertAudio.play();
+            playingAlert = true;
+            alertIntervalId = setInterval(() => {
+                alertAudio.play();
+            }, alertAudio.duration * 1000);
+        }
+
+        return () => {
+            alertAudio.pause();
+            alertAudio.currentTime = 0;
+            clearInterval(alertIntervalId);
+            playingAlert = false;
+        };
+    }, [alertIsTrue1, alertIsTrue2]);
     return (
         <div>
             <Card className="parent__card">
@@ -155,7 +170,7 @@ const Containers = () => {
                             <p className="col__text">GAS DETECTOR</p>
                         </div>
                         <div className="col-6">
-                           <div className="row">
+                            <div className="row">
                                 <div className="col-2 col-md-4"></div>
                                 <div className="col-8 col-md-4 d-flex justify-content-center align-items-center">
                                     <div className="d-flex justify-content-center align-items-center">
@@ -232,7 +247,7 @@ const Containers = () => {
                             <p className="col__text">GAS DETECTOR</p>
                         </div>
                         <div className="col-6">
-                           <div className="row">
+                            <div className="row">
                                 <div className="col-2 col-md-4"></div>
                                 <div className="col-8 col-md-4 d-flex justify-content-center align-items-center">
                                     <div className="d-flex justify-content-center align-items-center">
@@ -312,7 +327,7 @@ const Containers = () => {
                             <p className="col__text">GAS DETECTOR</p>
                         </div>
                         <div className="col-6">
-                           <div className="row">
+                            <div className="row">
                                 <div className="col-2 col-md-4"></div>
                                 <div className="col-8 col-md-4 d-flex justify-content-center align-items-center">
                                     <div className="d-flex justify-content-center align-items-center">
@@ -389,7 +404,7 @@ const Containers = () => {
                             <p className="col__text">GAS DETECTOR</p>
                         </div>
                         <div className="col-6">
-                           <div className="row">
+                            <div className="row">
                                 <div className="col-2 col-md-4"></div>
                                 <div className="col-8 col-md-4 d-flex justify-content-center align-items-center">
                                     <div className="d-flex justify-content-center align-items-center">
@@ -466,7 +481,7 @@ const Containers = () => {
                             <p className="col__text">GAS DETECTOR</p>
                         </div>
                         <div className="col-6">
-                           <div className="row">
+                            <div className="row">
                                 <div className="col-2 col-md-4"></div>
                                 <div className="col-8 col-md-4 d-flex justify-content-center align-items-center">
                                     <div className="d-flex justify-content-center align-items-center">
@@ -546,7 +561,7 @@ const Containers = () => {
                             <p className="col__text">GAS DETECTOR</p>
                         </div>
                         <div className="col-6">
-                           <div className="row">
+                            <div className="row">
                                 <div className="col-2 col-md-4"></div>
                                 <div className="col-8 col-md-4 d-flex justify-content-center align-items-center">
                                     <div className="d-flex justify-content-center align-items-center">
@@ -623,7 +638,7 @@ const Containers = () => {
                             <p className="col__text">GAS DETECTOR</p>
                         </div>
                         <div className="col-6">
-                           <div className="row">
+                            <div className="row">
                                 <div className="col-2 col-md-4"></div>
                                 <div className="col-8 col-md-4 d-flex justify-content-center align-items-center">
                                     <div className="d-flex justify-content-center align-items-center">
@@ -700,7 +715,7 @@ const Containers = () => {
                             <p className="col__text">GAS DETECTOR</p>
                         </div>
                         <div className="col-6">
-                           <div className="row">
+                            <div className="row">
                                 <div className="col-2 col-md-4"></div>
                                 <div className="col-8 col-md-4 d-flex justify-content-center align-items-center">
                                     <div className="d-flex justify-content-center align-items-center">
